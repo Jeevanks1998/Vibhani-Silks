@@ -219,8 +219,8 @@ img {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Ugadi Festival Popup - COMPLETELY REDESIGNED WITH ANIMATIONS */
-.festival-popup {
+/* Simple Ugadi Popup - SMALL VERSION */
+.simple-popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -235,227 +235,40 @@ img {
     transition: all var(--transition-medium);
 }
 
-.festival-popup.active {
+.simple-popup.active {
     opacity: 1;
     visibility: visible;
 }
 
-.popup-container {
-    width: 95%;
-    max-width: 1100px;
-    max-height: 95vh;
+.simple-popup-content {
+    background: linear-gradient(135deg, var(--pure-white), var(--ivory));
+    border-radius: var(--border-radius-lg);
+    width: 90%;
+    max-width: 380px; /* Smaller width */
+    box-shadow: var(--shadow-hard);
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform var(--transition-medium);
+    border: 2px solid var(--festival-green);
     overflow: hidden;
-    position: relative;
 }
 
-.popup-content {
-    display: flex;
-    background: linear-gradient(135deg, #ffffff, #fff9f0);
-    border-radius: var(--border-radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-popup);
-    animation: popupSlideIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    transform: translateY(50px) scale(0.95);
+.simple-popup.active .simple-popup-content {
+    transform: translateY(0);
 }
 
-.festival-popup.active .popup-content {
-    animation: popupSlideIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-@keyframes popupSlideIn {
-    0% { transform: translateY(50px) scale(0.95); opacity: 0; }
-    100% { transform: translateY(0) scale(1); opacity: 1; }
-}
-
-.popup-left {
-    flex: 1;
-    background: linear-gradient(135deg, var(--festival-green), var(--festival-light-green));
-    padding: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    min-width: 300px;
-}
-
-.popup-left::before {
-    content: '';
+.simple-close-popup {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="none"/><path d="M50,50 Q75,30 100,50 T150,50" stroke="%23ffffff" stroke-width="1.5" fill="none" opacity="0.2"/><path d="M30,100 Q55,80 80,100 T130,100" stroke="%23ffffff" stroke-width="1.5" fill="none" opacity="0.2"/></svg>');
-    animation: bgFloat 20s linear infinite;
-}
-
-@keyframes bgFloat {
-    0% { transform: translateY(0) translateX(0); }
-    100% { transform: translateY(-200px) translateX(-200px); }
-}
-
-.festival-graphics {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.festival-icon {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, var(--festival-gold), var(--festival-orange));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 40px;
-    font-size: 4rem;
-    color: var(--pure-white);
-    position: relative;
-    animation: giftFloat 3s ease-in-out infinite;
-    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
-}
-
-@keyframes giftFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
-}
-
-.icon-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 180px;
-    height: 180px;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: pulseGlow 2s ease-in-out infinite;
-}
-
-@keyframes pulseGlow {
-    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
-    50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
-}
-
-.festival-confetti {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.confetti-piece {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: var(--festival-gold);
-    border-radius: 2px;
-    animation: confettiFall 5s linear infinite;
-}
-
-.confetti-piece:nth-child(1) {
-    top: -20px;
-    left: 10%;
-    background-color: var(--festival-gold);
-    animation-delay: 0s;
-}
-
-.confetti-piece:nth-child(2) {
-    top: -20px;
-    left: 30%;
-    background-color: var(--festival-orange);
-    animation-delay: 0.5s;
-}
-
-.confetti-piece:nth-child(3) {
-    top: -20px;
-    left: 50%;
-    background-color: var(--festival-pink);
-    animation-delay: 1s;
-}
-
-.confetti-piece:nth-child(4) {
-    top: -20px;
-    left: 70%;
-    background-color: var(--festival-purple);
-    animation-delay: 1.5s;
-}
-
-.confetti-piece:nth-child(5) {
-    top: -20px;
-    left: 90%;
-    background-color: var(--festival-green);
-    animation-delay: 2s;
-}
-
-.confetti-piece:nth-child(6) {
-    top: -20px;
-    left: 20%;
-    background-color: var(--festival-light-green);
-    animation-delay: 2.5s;
-}
-
-.confetti-piece:nth-child(7) {
-    top: -20px;
-    left: 40%;
-    background-color: var(--festival-gold);
-    animation-delay: 3s;
-}
-
-.confetti-piece:nth-child(8) {
-    top: -20px;
-    left: 60%;
-    background-color: var(--festival-orange);
-    animation-delay: 3.5s;
-}
-
-@keyframes confettiFall {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(500px) rotate(360deg); opacity: 0; }
-}
-
-.festival-ribbon {
-    position: absolute;
-    top: 30px;
-    right: -40px;
-    background: linear-gradient(135deg, var(--festival-pink), var(--festival-purple));
-    color: var(--pure-white);
-    padding: 12px 50px;
-    transform: rotate(45deg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-}
-
-.ribbon-text {
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.popup-right {
-    flex: 1.2;
-    padding: 50px;
-    position: relative;
-    min-width: 350px;
-}
-
-.close-popup {
-    position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 12px;
+    right: 12px;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--charcoal-grey);
     cursor: pointer;
     transition: all var(--transition-fast);
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -464,326 +277,171 @@ img {
     z-index: 10;
 }
 
-.close-popup:hover {
+.simple-close-popup:hover {
     background-color: var(--royal-maroon);
     color: var(--pure-white);
     transform: rotate(90deg);
 }
 
-.popup-body {
-    padding: 20px 0;
+.simple-popup-body {
+    padding: 25px 20px 20px; /* Reduced padding */
 }
 
-.festival-title {
+.simple-popup-header {
+    text-align: center;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.simple-popup-header h3 {
     color: var(--festival-green);
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-    line-height: 1.2;
-}
-
-.festival-text {
-    color: var(--charcoal-grey);
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.discount-banner {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 40px;
-    padding: 25px;
-    background: linear-gradient(135deg, rgba(46, 139, 87, 0.1), rgba(50, 205, 50, 0.1));
-    border-radius: var(--border-radius-lg);
-    border: 2px dashed var(--festival-green);
-    animation: borderPulse 2s infinite;
-}
-
-@keyframes borderPulse {
-    0%, 100% { border-color: var(--festival-green); }
-    50% { border-color: var(--festival-light-green); }
-}
-
-.discount-percent {
-    font-size: 4rem;
-    font-weight: 800;
-    color: var(--festival-green);
-    line-height: 1;
-    text-shadow: 3px 3px 0 rgba(46, 139, 87, 0.2);
-    animation: numberPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes numberPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-.discount-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.discount-text span:first-child {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--charcoal-grey);
-}
-
-.discount-text span:last-child {
-    font-size: 1.2rem;
-    color: var(--charcoal-grey);
-    opacity: 0.9;
-}
-
-.festival-offer-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.offer-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
-    background-color: var(--ivory);
-    border-radius: var(--border-radius-md);
-    transition: all var(--transition-medium);
-}
-
-.offer-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-soft);
-}
-
-.offer-item i {
-    font-size: 1.8rem;
-    color: var(--festival-green);
-    width: 40px;
-}
-
-.offer-label {
-    font-size: 0.9rem;
-    color: var(--charcoal-grey);
-    opacity: 0.7;
+    font-size: 1.4rem; /* Smaller font */
     margin-bottom: 5px;
 }
 
-.offer-code {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--festival-green);
-    background-color: rgba(46, 139, 87, 0.1);
-    padding: 5px 15px;
-    border-radius: 50px;
-    display: inline-block;
-    letter-spacing: 1px;
+.simple-discount-box {
+    background: linear-gradient(135deg, var(--festival-green), var(--festival-light-green));
+    padding: 20px; /* Reduced padding */
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin */
+    color: var(--pure-white);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
 }
 
-.offer-date {
-    font-size: 1.1rem;
+.simple-discount-percent {
+    font-size: 2.2rem; /* Smaller font */
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.simple-discount-text {
+    font-size: 1rem; /* Smaller font */
     font-weight: 600;
-    color: var(--royal-maroon);
+    opacity: 0.9;
 }
 
-.offer-time {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--festival-orange);
+.simple-offer-details {
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin */
 }
 
-.festival-benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.benefit-item {
-    display: flex;
+.simple-offer-item {
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: rgba(46, 139, 87, 0.1);
+    border-radius: var(--border-radius-sm);
     color: var(--charcoal-grey);
+    font-size: 0.95rem;
 }
 
-.benefit-item i {
+.simple-offer-item i {
     color: var(--festival-green);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
-.festival-actions {
+.simple-offer-item strong {
+    color: var(--festival-green);
+    font-weight: 700;
+}
+
+.simple-popup-actions {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 12px; /* Reduced gap */
+    margin-bottom: 10px;
 }
 
-.festival-shop-btn {
+.simple-shop-btn {
     background: linear-gradient(135deg, var(--festival-green), var(--festival-light-green));
     color: var(--pure-white);
     border: none;
+    padding: 14px 20px; /* Reduced padding */
+    border-radius: var(--border-radius-sm);
     font-weight: 600;
-    font-size: 1.1rem;
-    padding: 18px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-medium);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
+    text-align: center;
 }
 
-.festival-shop-btn:hover {
+.simple-shop-btn:hover {
     background: linear-gradient(135deg, var(--festival-light-green), var(--festival-green));
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
 }
 
-.festival-actions .btn-secondary {
-    border-color: var(--festival-green);
+.simple-later-btn {
+    background: none;
+    border: 1px solid var(--festival-green);
     color: var(--festival-green);
-    padding: 18px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    padding: 12px 20px; /* Reduced padding */
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all var(--transition-medium);
 }
 
-.festival-actions .btn-secondary:hover {
+.simple-later-btn:hover {
     background-color: rgba(46, 139, 87, 0.1);
 }
 
-.festival-note {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--charcoal-grey);
-    font-size: 0.9rem;
-    opacity: 0.8;
-    text-align: center;
-    justify-content: center;
-    padding: 15px;
-    background-color: rgba(46, 139, 87, 0.05);
-    border-radius: var(--border-radius-md);
-}
-
-.festival-note i {
-    color: var(--festival-green);
-}
-
-.festival-overlay {
+.simple-popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1900;
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-medium);
 }
 
-.festival-overlay.active {
+.simple-popup-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
-/* Responsive Design for Popup */
-@media (max-width: 992px) {
-    .popup-content {
-        flex-direction: column;
-        max-height: 90vh;
-        overflow-y: auto;
+/* Responsive adjustments for the small popup */
+@media (max-width: 576px) {
+    .simple-popup-content {
+        max-width: 320px;
     }
     
-    .popup-left, .popup-right {
-        min-width: 100%;
+    .simple-popup-body {
+        padding: 20px 15px 15px;
     }
     
-    .popup-left {
-        padding: 40px 30px;
-        min-height: 300px;
+    .simple-popup-header h3 {
+        font-size: 1.3rem;
     }
     
-    .popup-right {
-        padding: 40px 30px;
-    }
-    
-    .festival-offer-details {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .festival-title {
+    .simple-discount-percent {
         font-size: 1.8rem;
     }
     
-    .discount-banner {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .discount-percent {
-        font-size: 3.5rem;
-    }
-    
-    .festival-offer-details {
-        grid-template-columns: 1fr;
-    }
-    
-    .festival-icon {
-        width: 120px;
-        height: 120px;
-        font-size: 3rem;
-    }
-    
-    .ribbon-text {
+    .simple-discount-text {
         font-size: 0.9rem;
     }
     
-    .festival-ribbon {
-        top: 20px;
-        right: -35px;
-        padding: 10px 40px;
+    .simple-offer-item {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    
+    .simple-shop-btn, .simple-later-btn {
+        padding: 12px 16px;
+        font-size: 0.95rem;
     }
 }
-
-@media (max-width: 576px) {
-    .popup-container {
-        width: 98%;
-        max-height: 98vh;
-    }
-    
-    .popup-left, .popup-right {
-        padding: 30px 20px;
-    }
-    
-    .festival-title {
-        font-size: 1.6rem;
-    }
-    
-    .festival-text {
-        font-size: 1rem;
-    }
-    
-    .close-popup {
-        top: 15px;
-        right: 15px;
-    }
-    
-    .festival-actions {
-        flex-direction: column;
-    }
-    
-    .festival-actions .btn-primary,
-    .festival-actions .btn-secondary {
-        width: 100%;
-    }
-}
-
 /* Tagline Section */
 .tagline-section {
     padding: 60px 0;
@@ -3575,4 +3233,5 @@ img {
     .modal-saree-price {
         font-size: 1.8rem;
     }
+
 }
