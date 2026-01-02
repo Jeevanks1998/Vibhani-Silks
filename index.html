@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibhani Silks | Luxury Silk Sarees in India</title>
+    <meta name="description" content="Premium handwoven silk sarees by Vibhani Silks. Bridal, Kanjeevaram, Banarasi, and heritage silk sarees for timeless celebrations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="#">
+</head>
+<body>
+    <!-- Website Loader -->
+    <div class="website-loader" id="websiteLoader">
+        <div class="loader-content">
+            <h3 class="loader-text">Vibhani Silks</h3>
+            <p class="loader-subtext">Welcome to Luxury Silk Sarees</p>
+        </div>
+    </div>
+
+    <!-- Ugadi Festival Popup -->
+    <div class="festival-popup" id="festivalPopup">
+        <div class="popup-container">
+            <div class="popup-content">
+                <div class="popup-left">
+                    <div class="festival-graphics">
+                        <div class="festival-icon">
+                            <i class="fas fa-gift"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="festival-confetti">
+                            <div class="confetti-piece"></div>
+                            <div class="confetti-piece"></div>
+                            <div class="confetti-piece"></div>
+                            <div class="confetti-piece"></div>
+                            <div class="confetti-piece"></div>
+                            <div class="confetti-piece"></div>
+                            <div class="confetti-piece"></div>
+                            <div class="confetti-piece"></div>
+                        </div>
+                        <div class="festival-ribbon">
+                            <div class="ribbon-text">Ugadi Special</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-right">
+                    <button class="close-popup" id="closePopup">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="popup-body">
+                        <h3 class="festival-title">Ugadi Celebration Sale! 🎉</h3>
+                        <p class="festival-text">Celebrate the New Year with exclusive savings on our premium silk sarees collection</p>
+                        
+                        <div class="discount-banner">
+                            <div class="discount-percent">25%</div>
+                            <div class="discount-text">
+                                <span>OFF</span>
+                                <span>on all silk sarees</span>
+                            </div>
+                        </div>
+                        
+                        <div class="festival-offer-details">
+                            <div class="offer-item">
+                                <i class="fas fa-tag"></i>
+                                <div>
+                                    <div class="offer-label">Use Code:</div>
+                                    <div class="offer-code">UGADI25</div>
+                                </div>
+                            </div>
+                            <div class="offer-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <div class="offer-label">Valid Till:</div>
+                                    <div class="offer-date">April 15, 2024</div>
+                                </div>
+                            </div>
+                            <div class="offer-item">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <div class="offer-label">Limited Time:</div>
+                                    <div class="offer-time">Don't miss out!</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="festival-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Free shipping across Karnataka</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Easy 7-day returns</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personal styling assistance</span>
+                            </div>
+                        </div>
+                        
+                        <div class="festival-actions">
+                            <a href="#collections" class="btn-primary festival-shop-btn">
+                                <i class="fas fa-shopping-bag"></i>
+                                Shop the Collection
+                            </a>
+                            <button class="btn-secondary" id="laterBtn">
+                                <i class="far fa-clock"></i>
+                                Maybe Later
+                            </button>
+                        </div>
+                        
+                        <div class="festival-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span>This offer is exclusive to our website visitors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="festival-overlay" id="festivalOverlay"></div>
+
+    <!-- Shipping Marquee -->
+    <div class="shipping-marquee">
+        <div class="marquee-content">
+            <span><i class="fas fa-truck"></i> We ship all over Karnataka with free delivery on orders above ₹1000!</span>
+            <span><i class="fas fa-undo"></i> Easy returns within 7 days</span>
+            <span><i class="fas fa-shield-alt"></i> 100% authentic handwoven sarees</span>
+            <span><i class="fas fa-store"></i> Visit our store in Bangalore</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <div class="logo">
+                    <span class="logo-text">Vibhani</span>
+                    <span class="logo-text">Silks</span>
+                    <div class="logo-decoration">
+                        <div class="decoration-line"></div>
+                        <div class="decoration-dot"></div>
+                        <div class="decoration-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#sarees" class="nav-link">Sarees <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="menu-column">
+                                    <h4 class="menu-heading">By Fabric</h4>
+                                    <ul class="menu-list">
+                                        <li><a href="#" data-filter="kanjeevaram">Kanjeevaram Silk</a></li>
+                                        <li><a href="#" data-filter="banarasi">Banarasi Silk</a></li>
+                                        <li><a href="#" data-filter="mysore">Mysore Silk</a></li>
+                                        <li><a href="#" data-filter="chanderi">Chanderi Silk</a></li>
+                                        <li><a href="#" data-filter="ikat">Pochampally Ikat</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-column">
+                                    <h4 class="menu-heading">By Occasion</h4>
+                                    <ul class="menu-list">
+                                        <li><a href="#" data-filter="bridal">Wedding Sarees</a></li>
+                                        <li><a href="#" data-filter="festive">Festive Wear</a></li>
+                                        <li><a href="#" data-filter="party">Party Wear</a></li>
+                                        <li><a href="#" data-filter="daily">Daily Elegance</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-column">
+                                    <h4 class="menu-heading">Special</h4>
+                                    <ul class="menu-list">
+                                        <li><a href="#" data-filter="handloom">Handloom Exclusives</a></li>
+                                        <li><a href="#" data-filter="new">New Arrivals</a></li>
+                                        <li><a href="#" data-filter="bestseller">Best Sellers</a></li>
+                                        <li><a href="#" data-filter="bridal">Bridal Collection</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-column featured">
+                                    <div class="featured-saree">
+                                        <div class="featured-image"></div>
+                                        <p>New Collection: Royal Wedding Sarees</p>
+                                        <a href="#bridal" class="featured-link">View Now <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About Vibhani</a></li>
+                    <li class="nav-item"><a href="#lookbook" class="nav-link">Lookbook</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="action-btn search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="action-btn wishlist-btn" id="wishlistBtn">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </button>
+                <a href="https://wa.me/919901238646?text=Hi%20Vibhani%20Silks,%20I'd%20like%20to%20enquire%20about%20your%20sarees" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Enquire
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Floating Icons -->
+    <div class="floating-icons">
+        <a href="tel:9901238646" class="floating-icon call-icon" aria-label="Call us">
+            <i class="fas fa-phone"></i>
+            <span class="floating-tooltip">Call: 99012 38646</span>
+        </a>
+        <a href="https://wa.me/919901238646?text=Hi%20Vibhani%20Silks,%20I'd%20like%20to%20enquire%20about%20your%20sarees" class="floating-icon whatsapp-icon" aria-label="WhatsApp us" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="floating-tooltip">Chat on WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-header">
+                <h3>Search Vibhani Silks</h3>
+                <button class="close-search" id="closeSearch">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-input-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search for sarees, fabrics, occasions...">
+                <button class="search-submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <!-- Search results will be populated here -->
+            </div>
+            <div class="search-suggestions">
+                <h4>Popular Searches</h4>
+                <div class="suggestion-tags">
+                    <a href="#" data-search="Kanjeevaram">Kanjeevaram Sarees</a>
+                    <a href="#" data-search="Bridal">Bridal Collection</a>
+                    <a href="#" data-search="Banarasi">Banarasi Silk</a>
+                    <a href="#" data-search="Wedding">Wedding Sarees</a>
+                    <a href="#" data-search="Festive">Festive Collection</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-slider">
+                <!-- Slide 1 -->
+                <div class="hero-slide active">
+                    <div class="slide-content">
+                        <h1 class="hero-title">Vibhani Silks</h1>
+                        <div class="hero-text-container">
+                            <p class="hero-subtitle">Where Heritage is Woven into Elegance</p>
+                            <p class="hero-description">Handcrafted silk sarees inspired by India's timeless traditions.</p>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="#collections" class="btn-primary">Explore Collections</a>
+                            <a href="#bridal" class="btn-secondary">Bridal Sarees</a>
+                        </div>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide">
+                    <div class="slide-content">
+                        <h1 class="hero-title">Timeless Sarees for Timeless Celebrations</h1>
+                        <div class="hero-text-container">
+                            <p class="hero-subtitle">Crafted in Silk. Perfected by Tradition.</p>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="#bridal" class="btn-primary">View Bridal Collection</a>
+                            <a href="#contact" class="btn-secondary">Book a Styling Call</a>
+                        </div>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide">
+                    <div class="slide-content">
+                        <h1 class="hero-title">Ugadi Special: 25% OFF</h1>
+                        <div class="hero-text-container">
+                            <p class="hero-subtitle">Celebrate the New Year with our exclusive collection</p>
+                            <p class="hero-description">Use code UGADI25 for extra savings</p>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="#collections" class="btn-primary">Shop Festive Collection</a>
+                            <a href="https://wa.me/919901238646?text=Hi%20Vibhani%20Silks,%20I'd%20like%20to%20enquire%20about%20Ugadi%20offers" class="btn-secondary" target="_blank">Enquire Now</a>
+                        </div>
+                    </div>
+                    <div class="slide-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="slider-prev" id="sliderPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="slider-next" id="sliderNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- New Tagline Section -->
+        <section class="tagline-section" id="tagline">
+            <div class="container">
+                <div class="tagline-content">
+                    <h2 class="tagline-text">Vibhani Silks — Elegance woven in every drape ❤️✨</h2>
+                    <div class="tagline-decoration">
+                        <div class="tagline-line"></div>
+                        <i class="fas fa-heart"></i>
+                        <div class="tagline-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Promise Section -->
+        <section class="brand-promise-section">
+            <div class="container">
+                <h2 class="section-title">Why Vibhani Silks</h2>
+                <div class="promise-grid">
+                    <div class="promise-card">
+                        <div class="promise-icon">
+                            <i class="fas fa-hand-sparkles"></i>
+                        </div>
+                        <h3 class="promise-title">Handwoven Excellence</h3>
+                        <p class="promise-text">Each saree is meticulously handwoven by master craftsmen with years of expertise.</p>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="promise-title">Premium Silks</h3>
+                        <p class="promise-text">We source only the finest silks from across India, ensuring luxury in every thread.</p>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3 class="promise-title">Heritage Craftsmanship</h3>
+                        <p class="promise-text">Traditional techniques passed down through generations, preserved with care.</p>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="promise-title">Trusted by Thousands</h3>
+                        <p class="promise-text">Over 10,000 satisfied customers who cherish their Vibhani Silks experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="collections-section" id="collections">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Collections</h2>
+                    <a href="#sarees" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="collections-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="kanjeevaram">Kanjeevaram</button>
+                    <button class="filter-btn" data-filter="banarasi">Banarasi</button>
+                    <button class="filter-btn" data-filter="bridal">Bridal</button>
+                    <button class="filter-btn" data-filter="handloom">Handloom</button>
+                    <button class="filter-btn" data-filter="festive">Festive</button>
+                </div>
+                
+                <div class="saree-grid" id="sareeGrid">
+                    <!-- Saree cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Bridal Spotlight -->
+        <section class="bridal-section" id="bridal">
+            <div class="container">
+                <div class="bridal-content">
+                    <div class="bridal-text">
+                        <h2 class="section-title">For Weddings That Deserve Timeless Elegance</h2>
+                        <p class="bridal-description">Our bridal collection features exquisite silk sarees that make you feel like royalty on your special day. Each piece is designed to celebrate the most important moments of your life.</p>
+                        <a href="#bridal-collection" class="btn-primary">Explore Bridal Sarees</a>
+                    </div>
+                    <div class="bridal-image">
+                        <!-- Bridal saree image placeholder -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Occasion-Based Shopping -->
+        <section class="occasion-section">
+            <div class="container">
+                <h2 class="section-title">Shop By Occasion</h2>
+                <div class="occasion-scroll">
+                    <div class="occasion-card" data-occasion="wedding">
+                        <div class="occasion-image wedding-image"></div>
+                        <div class="occasion-overlay">
+                            <h3>Wedding</h3>
+                            <p>Timeless elegance for the big day</p>
+                        </div>
+                    </div>
+                    <div class="occasion-card" data-occasion="festive">
+                        <div class="occasion-image festive-image"></div>
+                        <div class="occasion-overlay">
+                            <h3>Festive</h3>
+                            <p>Celebrate traditions in style</p>
+                        </div>
+                    </div>
+                    <div class="occasion-card" data-occasion="party">
+                        <div class="occasion-image party-image"></div>
+                        <div class="occasion-overlay">
+                            <h3>Party</h3>
+                            <p>Make a statement at any gathering</p>
+                        </div>
+                    </div>
+                    <div class="occasion-card" data-occasion="daily">
+                        <div class="occasion-image daily-image"></div>
+                        <div class="occasion-overlay">
+                            <h3>Daily Elegance</h3>
+                            <p>Comfort meets sophistication</p>
+                        </div>
+                    </div>
+                    <div class="occasion-card" data-occasion="ugadi">
+                        <div class="occasion-image ugadi-image"></div>
+                        <div class="occasion-overlay">
+                            <h3>Ugadi Special</h3>
+                            <p>25% OFF on festive collection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Craftsmanship Story -->
+        <section class="craftsmanship-section">
+            <div class="container">
+                <div class="craftsmanship-content">
+                    <div class="craftsmanship-image"></div>
+                    <div class="craftsmanship-text">
+                        <h2 class="section-title">Our Craftsmanship Story</h2>
+                        <p class="craftsmanship-description">Every Vibhani saree carries a story of skilled hands and timeless tradition. From the careful selection of silk threads to the intricate weaving process, each step is performed with dedication and respect for heritage craftsmanship.</p>
+                        <p class="craftsmanship-description">Our weavers spend weeks, sometimes months, creating a single saree, ensuring every detail is perfect. This commitment to excellence is what makes Vibhani Silks a symbol of luxury and trust.</p>
+                        <a href="#about" class="btn-secondary">Our Heritage <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonials-container">
+                        <div class="testimonial-card active">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">"My Vibhani Kanjeevaram saree was the talk of my sister's wedding. The craftsmanship is unparalleled, and the silk feels luxurious. Worth every penny!"</p>
+                                <div class="testimonial-author">
+                                    <h4>Netra</h4>
+                                    <p>Bangalore</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">"As a bride, I was looking for something unique and elegant. Vibhani's bridal collection exceeded my expectations. The attention to detail is remarkable."</p>
+                                <div class="testimonial-author">
+                                    <h4>Ananya Reddy</h4>
+                                    <p>Bangalore</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">"The customer service was exceptional. They helped me choose the perfect saree for my anniversary and even arranged a video preview. Highly recommended!"</p>
+                                <div class="testimonial-author">
+                                    <h4>Meera Patel</h4>
+                                    <p>Bangalore</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-controls">
+                        <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                        <div class="testimonial-dots">
+                            <span class="dot active" data-testimonial="0"></span>
+                            <span class="dot" data-testimonial="1"></span>
+                            <span class="dot" data-testimonial="2"></span>
+                        </div>
+                        <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lookbook Section -->
+        <section class="lookbook-section" id="lookbook">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Instagram Lookbook</h2>
+                    <a href="https://instagram.com/vibhanisilks" class="view-all-link" target="_blank">Follow Us <i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="lookbook-grid">
+                    <div class="lookbook-item">
+                        <div class="lookbook-image image-1"></div>
+                        <div class="lookbook-overlay">
+                            <p>#VibhaniSilks</p>
+                        </div>
+                    </div>
+                    <div class="lookbook-item">
+                        <div class="lookbook-image image-2"></div>
+                        <div class="lookbook-overlay">
+                            <p>Traditional Weaves</p>
+                        </div>
+                    </div>
+                    <div class="lookbook-item">
+                        <div class="lookbook-image image-3"></div>
+                        <div class="lookbook-overlay">
+                            <p>Bridal Elegance</p>
+                        </div>
+                    </div>
+                    <div class="lookbook-item">
+                        <div class="lookbook-image image-4"></div>
+                        <div class="lookbook-overlay">
+                            <p>Festive Collection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Begin Your Journey With Vibhani Silks</h2>
+                    <p class="cta-text">Experience luxury that tells a story. Let us help you find the perfect saree for your special occasion.</p>
+                    <a href="https://wa.me/919901238646?text=Hi%20Vibhani%20Silks,%20I'd%20like%20to%20enquire%20about%20your%20sarees" class="btn-primary whatsapp-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Enquire on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">Vibhani</span>
+                        <span class="logo-text">Silks</span>
+                    </div>
+                    <p class="footer-tagline">Where Heritage is Woven into Elegance</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Shop By</h4>
+                        <ul>
+                            <li><a href="#collections" data-filter="all">All Collections</a></li>
+                            <li><a href="#collections" data-filter="bridal">Bridal</a></li>
+                            <li><a href="#collections" data-filter="festive">Festive</a></li>
+                            <li><a href="#collections" data-filter="new">New Arrivals</a></li>
+                            <li><a href="#collections" data-filter="bestseller">Best Sellers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#">Our Craftsmanship</a></li>
+                            <li><a href="#">Care Guide</a></li>
+                            <li><a href="#">Size Guide</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#">Order Tracking</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> , Bangalore, Karnataka</li>
+                            <li><i class="fas fa-phone"></i> +91 99012 38646</li>
+                            <li><i class="fas fa-envelope"></i> info@vibhanisilks.com</li>
+                            <li><i class="fab fa-whatsapp"></i> WhatsApp Enquiry</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="newsletter">
+                    <h4>Subscribe for Updates</h4>
+                    <p>Be the first to know about new collections and exclusive offers.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2026 Vibhani Silks. All rights reserved.</p>
+                    <p>Handcrafted with <i class="fas fa-heart"></i> in India</p>
+                    <p class="designer-credit">Website Designed by Jeevan KS</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Saree Detail Modal -->
+    <div class="saree-detail-modal" id="sareeDetailModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-header">
+            <h3>Your Wishlist</h3>
+            <button class="close-wishlist" id="closeWishlist">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="wishlist-items" id="wishlistItems">
+            <!-- Wishlist items will be added here -->
+            <div class="empty-wishlist">
+                <i class="fas fa-heart"></i>
+                <p>Your wishlist is empty</p>
+                <p>Save your favorite sarees for later</p>
+            </div>
+        </div>
+        <div class="wishlist-footer">
+            <a href="https://wa.me/919901238646?text=Hi%20Vibhani%20Silks,%20I'm%20interested%20in%20sarees%20from%20my%20wishlist" class="btn-primary whatsapp-all-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Enquire About All
+            </a>
+        </div>
+    </div>
+    <div class="wishlist-overlay" id="wishlistOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
