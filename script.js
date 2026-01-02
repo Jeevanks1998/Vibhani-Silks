@@ -1,4 +1,3 @@
-// script.js - COMPLETE UPDATED VERSION WITH FIXED POPUP
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the application
     initLoader();
@@ -30,13 +29,70 @@ function initLoader() {
         // Remove loader from DOM after transition completes
         setTimeout(() => {
             loader.style.display = 'none';
-            // Show festival popup after loader disappears
-            showFestivalPopup();
+            // Show simple festival popup after loader disappears
+            showFestivalPopupSimple();
         }, 800);
     }, 2000);
 }
 
-// Ugadi Festival Popup - FIXED VERSION
+// Simple Ugadi Popup - SMALL VERSION
+function showFestivalPopupSimple() {
+    const simplePopup = document.getElementById('simplePopup');
+    const simplePopupOverlay = document.getElementById('simplePopupOverlay');
+    const simpleClosePopup = document.getElementById('simpleClosePopup');
+    const simpleLaterBtn = document.getElementById('simpleLaterBtn');
+    const simpleShopBtn = document.querySelector('.simple-shop-btn');
+    
+    // Check if user has already dismissed the popup
+    const popupDismissed = localStorage.getItem('simplePopupDismissed');
+    const today = new Date().toDateString();
+    
+    // Show popup if not dismissed today
+    if (!popupDismissed || popupDismissed !== today) {
+        // Add active class to show popup
+        simplePopup.classList.add('active');
+        simplePopupOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Setup event listeners
+        function closePopup() {
+            simplePopup.classList.remove('active');
+            simplePopupOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            localStorage.setItem('simplePopupDismissed', today);
+        }
+        
+        // Close popup
+        simpleClosePopup.addEventListener('click', closePopup);
+        
+        // Later button
+        simpleLaterBtn.addEventListener('click', closePopup);
+        
+        // Shop button - scroll to collections
+        if (simpleShopBtn) {
+            simpleShopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                closePopup();
+                // Scroll to collections section
+                setTimeout(() => {
+                    document.getElementById('collections').scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+            });
+        }
+        
+        // Close when clicking overlay
+        simplePopupOverlay.addEventListener('click', closePopup);
+        
+        // Close with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && simplePopup.classList.contains('active')) {
+                closePopup();
+            }
+        });
+    }
+}
+
+// Ugadi Festival Popup - ORIGINAL VERSION (for reference/backup)
 function showFestivalPopup() {
     const festivalPopup = document.getElementById('festivalPopup');
     const festivalOverlay = document.getElementById('festivalOverlay');
