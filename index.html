@@ -21,107 +21,42 @@
         </div>
     </div>
 
-    <!-- Ugadi Festival Popup -->
-    <div class="festival-popup" id="festivalPopup">
-        <div class="popup-container">
-            <div class="popup-content">
-                <div class="popup-left">
-                    <div class="festival-graphics">
-                        <div class="festival-icon">
-                            <i class="fas fa-gift"></i>
-                            <div class="icon-glow"></div>
-                        </div>
-                        <div class="festival-confetti">
-                            <div class="confetti-piece"></div>
-                            <div class="confetti-piece"></div>
-                            <div class="confetti-piece"></div>
-                            <div class="confetti-piece"></div>
-                            <div class="confetti-piece"></div>
-                            <div class="confetti-piece"></div>
-                            <div class="confetti-piece"></div>
-                            <div class="confetti-piece"></div>
-                        </div>
-                        <div class="festival-ribbon">
-                            <div class="ribbon-text">Ugadi Special</div>
-                        </div>
-                    </div>
+    <!-- Simple Ugadi Festival Popup -->
+<div class="simple-popup" id="simplePopup">
+    <div class="simple-popup-content">
+        <button class="simple-close-popup" id="simpleClosePopup">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="simple-popup-body">
+            <div class="simple-popup-header">
+                <h3>🎉 Ugadi Sale!</h3>
+            </div>
+            
+            <div class="simple-discount-box">
+                <div class="simple-discount-percent">25% OFF</div>
+                <p class="simple-discount-text">on all silk sarees</p>
+            </div>
+            
+            <div class="simple-offer-details">
+                <div class="simple-offer-item">
+                    <i class="fas fa-tag"></i>
+                    <span>Code: <strong>UGADI25</strong></span>
                 </div>
-                <div class="popup-right">
-                    <button class="close-popup" id="closePopup">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <div class="popup-body">
-                        <h3 class="festival-title">Ugadi Celebration Sale! 🎉</h3>
-                        <p class="festival-text">Celebrate the New Year with exclusive savings on our premium silk sarees collection</p>
-                        
-                        <div class="discount-banner">
-                            <div class="discount-percent">25%</div>
-                            <div class="discount-text">
-                                <span>OFF</span>
-                                <span>on all silk sarees</span>
-                            </div>
-                        </div>
-                        
-                        <div class="festival-offer-details">
-                            <div class="offer-item">
-                                <i class="fas fa-tag"></i>
-                                <div>
-                                    <div class="offer-label">Use Code:</div>
-                                    <div class="offer-code">UGADI25</div>
-                                </div>
-                            </div>
-                            <div class="offer-item">
-                                <i class="fas fa-calendar-alt"></i>
-                                <div>
-                                    <div class="offer-label">Valid Till:</div>
-                                    <div class="offer-date">April 15, 2024</div>
-                                </div>
-                            </div>
-                            <div class="offer-item">
-                                <i class="fas fa-bolt"></i>
-                                <div>
-                                    <div class="offer-label">Limited Time:</div>
-                                    <div class="offer-time">Don't miss out!</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="festival-benefits">
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Free shipping across Karnataka</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Easy 7-day returns</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Personal styling assistance</span>
-                            </div>
-                        </div>
-                        
-                        <div class="festival-actions">
-                            <a href="#collections" class="btn-primary festival-shop-btn">
-                                <i class="fas fa-shopping-bag"></i>
-                                Shop the Collection
-                            </a>
-                            <button class="btn-secondary" id="laterBtn">
-                                <i class="far fa-clock"></i>
-                                Maybe Later
-                            </button>
-                        </div>
-                        
-                        <div class="festival-note">
-                            <i class="fas fa-info-circle"></i>
-                            <span>This offer is exclusive to our website visitors</span>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="simple-popup-actions">
+                <a href="#collections" class="simple-shop-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                    Shop Now
+                </a>
+                <button class="simple-later-btn" id="simpleLaterBtn">
+                    Maybe Later
+                </button>
             </div>
         </div>
     </div>
-    <div class="festival-overlay" id="festivalOverlay"></div>
+</div>
+<div class="simple-popup-overlay" id="simplePopupOverlay"></div>
 
     <!-- Shipping Marquee -->
     <div class="shipping-marquee">
@@ -707,4 +642,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
